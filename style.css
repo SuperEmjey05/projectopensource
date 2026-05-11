@@ -33,16 +33,30 @@ nav a{
 nav a:hover{
     color:#38bdf8;
 }
-
-/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(45deg,#0f172a,#1e3a8a);
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+    overflow: hidden;
+    body{
+    background: url("images/milkyway.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
 }
+}
+
 
 .hero-content{
     display:flex;
@@ -269,4 +283,231 @@ footer{
     position: absolute;
     left: 0;
     color: #38bdf8;
+}
+body{
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+/* METEOR SHOWER LAYER */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+/* METEORS */
+.hero::after{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    pointer-events:none;
+    background: transparent;
+    animation: meteorMove 8s linear infinite;
+}
+.hero{
+    position: relative;
+}
+
+/* INDIVIDUAL METEORS */
+.hero .meteor{
+    position:absolute;
+    width:2px;
+    height:80px;
+    background: linear-gradient(white, rgba(255,255,255,0));
+    opacity:0;
+    transform: rotate(45deg);
+    animation: shoot 2s linear infinite;
+}
+@keyframes shoot{
+    0%{
+        transform: translate(0,0) rotate(45deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(600px,600px) rotate(45deg);
+        opacity: 0;
+    }
+}
+/* METEOR CONTAINER */
+.meteors{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* SHOOTING STAR */
+.meteors span{
+    position: absolute;
+    top: -100px;
+    width: 2px;
+    height: 120px;
+
+    /* bright core */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1),
+        rgba(56,189,248,0.8),
+        transparent
+    );
+
+    transform: rotate(45deg);
+    opacity: 0.9;
+
+    animation: meteorFall linear infinite;
+}
+
+/* ✨ TRAIL GLOW EFFECT */
+.meteors span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 8px;
+    height: 140px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.8),
+        rgba(56,189,248,0.4),
+        transparent
+    );
+
+    filter: blur(6px);
+    opacity: 0.7;
+    transform: translateX(-3px);
+}
+
+/* DIFFERENT STARS */
+.meteors span:nth-child(1){
+    left: 10%;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+.meteors span:nth-child(2){
+    left: 25%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.meteors span:nth-child(3){
+    left: 45%;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+}
+
+.meteors span:nth-child(4){
+    left: 70%;
+    animation-duration: 3.2s;
+    animation-delay: 1.2s;
+}
+
+.meteors span:nth-child(5){
+    left: 85%;
+    animation-duration: 2.8s;
+    animation-delay: 0.8s;
+}
+
+/* FALL ANIMATION */
+@keyframes meteorFall{
+    0%{
+        transform: translateY(-200px) translateX(0) rotate(45deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(120vh) translateX(-250px) rotate(45deg);
+        opacity: 0;
+    }
+}
+/* PARALLAX BASE */
+.parallax-container{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+/* GALAXY BACKGROUND (SLOW MOVE) */
+.galaxy-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 120%;
+    height: 120%;
+
+    background: url("images/milkyway.jpg") no-repeat center center;
+    background-size: cover;
+
+    animation: galaxyMove 40s linear infinite alternate;
+
+    z-index: -3;
+    filter: brightness(0.7) contrast(1.2);
+}
+
+/* STARS LAYER (FASTER FLOAT) */
+.stars-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 120%;
+    height: 120%;
+
+    background: url("images/stars.png") repeat;
+
+    opacity: 0.4;
+
+    animation: starsMove 20s linear infinite alternate;
+
+    z-index: -2;
+}
+
+/* GALAXY DRIFT */
+@keyframes galaxyMove{
+    0%{
+        transform: translate(0px, 0px) scale(1.05);
+    }
+    100%{
+        transform: translate(-40px, -20px) scale(1.1);
+    }
+}
+
+/* STARS FLOAT */
+@keyframes starsMove{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(30px, 20px);
+    }
+}
+header,
+.hero,
+.about,
+.projects,
+.contact{
+    position: relative;
+    z-index: 2;
 }
