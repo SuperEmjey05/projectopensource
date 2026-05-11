@@ -1,201 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+<title>My Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1 class="logo">My Portfolio</h1>
+<!-- HEADER -->
+<header>
+    <h1 class="logo">My Portfolio</h1>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-   <!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero" id="home">
 
     <div class="hero-content">
 
-        <!-- YOUR PHOTO -->
-        <img src=""C:\Users\user\Desktop\projectopensource\images\mark.jpg.jpg"" alt="My Photo" class="profile-img">
+        <img src="images/mark.jpg" alt="My Photo" class="profile-img">
 
-        <h2>Hello, I'm Mark John Fernandez</h2>
+        <h2>Hello, I'm <span>Mark John Fernandez</span></h2>
 
-        <p>
-            Future Web Developer | IT Student | System Designer
-        </p>
+        <p>Future Web Developer | IT Student | System Designer</p>
 
-        <a href="#projects" class="btn">
-            View Projects
-        </a>
+        <a href="#projects" class="btn">View Projects</a>
 
     </div>
 
 </section>
 
- <!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="about" id="about">
 
-    <h2>About Me</h2>
+<h2>About Me</h2>
 
-    <div class="about-container">
+<div class="about-container">
 
-        <!-- RESUME CARD -->
-        <div class="card">
+    <!-- RESUME -->
+    <div class="card">
+        <h3>Resume</h3>
+        <p>
+            I am an IT student who loves building websites and systems
+            using modern technologies.
+        </p>
 
-            <h3>Resume</h3>
+        <h3>Education</h3>
+        <ul>
+            <li>Elementary School</li>
+            <li>High School</li>
+            <li>Senior High School</li>
+            <li>BS Information Technology</li>
+        </ul>
+    </div>
 
-            <p>
-                I am an IT student who loves creating websites,
-                systems, and programming projects using different
-                technologies and modern web tools.
-            </p>
+    <!-- SKILLS -->
+    <div class="card">
 
-            <h3>Education</h3>
+        <h3>Skills & Applications</h3>
 
-            <ul>
-                <li>Elementary School</li>
-                <li>High School</li>
-                <li>Senior High School</li>
-                <li>BS Information Technology</li>
-            </ul>
+        <div class="skills-container">
 
-        </div>
+            <div class="skill-card html">
+                <i class="fa-brands fa-html5"></i>
+                <h4>HTML</h4>
+            </div>
 
-        <!-- SKILLS CARD -->
-        <div class="card">
+            <div class="skill-card css">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h4>CSS</h4>
+            </div>
 
-            <h3>Skills & Applications</h3>
+            <div class="skill-card js">
+                <i class="fa-brands fa-js"></i>
+                <h4>JS</h4>
+            </div>
 
-            <div class="skills-container">
+            <div class="skill-card php">
+                <i class="fa-brands fa-php"></i>
+                <h4>PHP</h4>
+            </div>
 
-                <div class="skill-card html">
-                    <i class="fa-brands fa-html5"></i>
-                    <h4>HTML</h4>
-                </div>
+            <div class="skill-card java">
+                <i class="fa-brands fa-java"></i>
+                <h4>Java</h4>
+            </div>
 
-                <div class="skill-card css">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h4>CSS</h4>
-                </div>
+            <div class="skill-card python">
+                <i class="fa-brands fa-python"></i>
+                <h4>Python</h4>
+            </div>
 
-                <div class="skill-card js">
-                    <i class="fa-brands fa-js"></i>
-                    <h4>JavaScript</h4>
-                </div>
+            <div class="skill-card github">
+                <i class="fa-brands fa-github"></i>
+                <h4>GitHub</h4>
+            </div>
 
-                <div class="skill-card php">
-                    <i class="fa-brands fa-php"></i>
-                    <h4>PHP</h4>
-                </div>
-
-                <div class="skill-card java">
-                    <i class="fa-brands fa-java"></i>
-                    <h4>Java</h4>
-                </div>
-
-                <div class="skill-card python">
-                    <i class="fa-brands fa-python"></i>
-                    <h4>Python</h4>
-                </div>
-
-                <div class="skill-card github">
-                    <i class="fa-brands fa-github"></i>
-                    <h4>GitHub</h4>
-                </div>
-
-                <div class="skill-card mysql">
-                    <i class="fa-solid fa-database"></i>
-                    <h4>MySQL</h4>
-                </div>
-
+            <div class="skill-card mysql">
+                <i class="fa-solid fa-database"></i>
+                <h4>MySQL</h4>
             </div>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
 
+<!-- PROJECTS -->
+<section class="projects" id="projects">
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
+<h2>My Projects</h2>
 
-        <h2>My Projects</h2>
+<div class="project-container">
 
-        <div class="project-container">
+    <a href="https://github.com/" target="_blank" class="project-card">
+        <h3>Library System</h3>
+        <p>PHP & MySQL system</p>
+    </a>
 
-            <div class="project-card">
-                <h3>Library System</h3>
-                <p>Library management system using PHP & MySQL.</p>
-            </div>
+    <a href="https://github.com/" target="_blank" class="project-card">
+        <h3>Bank System</h3>
+        <p>XAMPP + phpMyAdmin</p>
+    </a>
 
-            <div class="project-card">
-                <h3>Bank Transaction System</h3>
-                <p>Database project using XAMPP and phpMyAdmin.</p>
-            </div>
+    <a href="https://github.com/" target="_blank" class="project-card">
+        <h3>Student System</h3>
+        <p>Information management system</p>
+    </a>
 
-            <div class="project-card">
-                <h3>Student Information System</h3>
-                <p>System for managing student information.</p>
-            </div>
+    <a href="https://github.com/" target="_blank" class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio design</p>
+    </a>
 
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>Responsive personal portfolio website.</p>
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- CONTACT -->
+<section class="contact" id="contact">
 
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
+<h2>Contact Me</h2>
 
-        <h2>Contact Me</h2>
+<p>Email: yourgmail@gmail.com</p>
+<p>Phone: 09XXXXXXXXX</p>
 
-        <p>Email: yourgmail@gmail.com</p>
-        <p>Phone: 09XXXXXXXXX</p>
+<div class="social-icons">
 
-        <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
 
-            <a href="https://facebook.com" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
+</div>
 
-            <a href="https://github.com" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
+</section>
 
-            <a href="https://instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 My Portfolio Website</p>
-    </footer>
+<footer>
+<p>© 2026 My Portfolio Website</p>
+</footer>
 
 </body>
 </html>

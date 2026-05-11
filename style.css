@@ -42,13 +42,93 @@ nav a:hover{
     align-items:center;
     text-align:center;
     background:linear-gradient(45deg,#0f172a,#1e3a8a);
+    /* HERO CENTER CONTROL (IMPORTANT FIX) */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* FORCE CONTENT STACKING */
+.hero > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* PROFILE IMAGE (SMALL + CLEAN) */
+.profile-img{
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid #38bdf8;
+
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
+
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatImage{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-6px);}
+    100%{transform: translateY(0);}
+}
 }
 
 .profile-img{
-    width:180px;
-    border-radius:50%;
-    margin-bottom:20px;
-    animation:float 4s infinite ease-in-out;
+  .profile-img{
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    border: 3px solid rgba(56, 189, 248, 0.9);
+
+    padding: 4px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,0.4),
+        0 0 35px rgba(37,99,235,0.25);
+
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatImage{
+    0%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(-10px) rotate(2deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* HOVER EFFECT */
+.profile-img:hover{
+    transform: scale(1.05) rotate(-2deg);
+
+    box-shadow:
+        0 0 25px rgba(56,189,248,0.6),
+        0 0 50px rgba(37,99,235,0.35);
+}
 }
 
 @keyframes float{
@@ -58,6 +138,7 @@ nav a:hover{
 }
 
 .btn{
+     margin-top: 15px;
     padding:12px 25px;
     background:#38bdf8;
     color:black;
