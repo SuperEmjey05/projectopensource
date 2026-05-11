@@ -253,3 +253,20 @@ footer{
     color:#38bdf8;
     text-shadow: 0 0 10px #38bdf8;
 }
+.card ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.card ul li::before{
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #38bdf8;
+}
