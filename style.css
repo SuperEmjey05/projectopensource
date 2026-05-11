@@ -138,7 +138,6 @@ nav a:hover{
 }
 
 .btn{
-     margin-top: 15px;
     padding:12px 25px;
     background:#38bdf8;
     color:black;
@@ -236,4 +235,10 @@ footer{
     text-align:center;
     padding:20px;
     background:black;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
